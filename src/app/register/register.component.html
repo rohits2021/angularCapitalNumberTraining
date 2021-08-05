@@ -1,0 +1,65 @@
+<!-- 
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" 
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">ToDoListApp</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/alluser">AllUser</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <button class="btn btn-outline-primary me-3" type="button" routerLink="/register">Register</button>
+          <button class="btn btn-outline-success me-3" type="button" routerLink="/login">Login</button>
+          <button class="btn btn-outline-danger" type="button">Logout</button>
+        </form>
+      </div>
+    </div>
+  </nav> -->
+<form id="form" style="border:2px solid rgb(231, 231, 231);border-radius: 1%;" class="mt-2">
+  <div class="container " >
+     <div class="row pb-3">
+         <div class="col-6"><h1><b>Register</b></h1></div>
+         <div class="col-6 pt-2">
+             <div class="pt-2">
+                <span>Already Registered ? </span>&nbsp; &nbsp;<a routerLink="/login"> Login</a>
+             </div>         
+            </div>
+     </div> 
+    
+    <label for="email" ><b>Email</b></label>
+    <input type="text" class="form-control" placeholder="Enter Email" 
+    [(ngModel)]="registerUserData.email" name="email" required>
+
+    <!-- <label for="name" ><b>Name</b></label>
+    <input type="text" class="form-control" placeholder="Enter Name" 
+    [(ngModel)]="registerUserData.name" name="name" required>
+
+    <label for="number" ><b>Number</b></label>
+    <input type="text" class="form-control" placeholder="Enter Contact Number" 
+    [(ngModel)]="registerUserData.number" name="number" required> -->
+
+    <label for="psw" ><b>Password</b></label>
+    <input type="password" class="form-control" placeholder="Enter Password"
+    [(ngModel)]="registerUserData.password" name="password" required>
+  
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="row"> 
+        <!-- <div class="col"></div> -->
+        <div class="col"> <button type="button" class="signupbtn" id="button"
+            (click)="register()">Register</button></div>    
+        <!-- <div class="col"></div> -->
+    </div>
+
+  </div>
+</form>
+
